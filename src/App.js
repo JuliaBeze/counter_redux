@@ -6,17 +6,9 @@ import Header from "./Header"
 import Settings from "./Left-field/Settings";
 import ButtonSettings from "./Left-field/ButtonSettings";
 import {connect} from "react-redux";
-import {
-    activateEditMode,
-    addNumberClick,
-    changeMaxValue,
-    changeStartValue,
-    deactivateEditMode,
-    onResetButtonClick,
-    setErrorMaxValue,
-    setErrorStartValue,
-    setNewValues
-} from "./redux/reducer";
+import {activateEditMode, addNumberClick, changeMaxValue,
+    changeStartValue, deactivateEditMode, onResetButtonClick, setErrorMaxValue,
+    setErrorStartValue, setNewValues} from "./redux/reducer";
 
 
 class App extends React.Component {
@@ -118,14 +110,5 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps, {
-    addNumberClick,
-    changeMaxValue,
-    activateEditMode,
-    changeStartValue,
-    deactivateEditMode,
-    setErrorStartValue,
-    setErrorMaxValue,
-    onResetButtonClick,
-    setNewValues
-})(App);
+export default connect(mapStateToProps, {addNumberClick, changeMaxValue, activateEditMode,
+    changeStartValue, deactivateEditMode, setErrorStartValue, setErrorMaxValue, onResetButtonClick, setNewValues})(App);
